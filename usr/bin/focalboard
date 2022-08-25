@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+datadir=$HOME/.local/share/focalboard
+[[ -d ${datadir} ]] || mkdir -p ${datadir}
+cd ${datadir}
+cp -r /opt/focalboard/focalboard-app $datadir/
+cp -r /opt/focalboard/pack $datadir/
+[[ -d "files" ]] || mkdir -p files
+touch focalboard.db
+
+exec -a "$0" "$datadir/focalboard-app" "$@"
