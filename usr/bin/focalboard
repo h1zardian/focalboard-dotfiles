@@ -3,8 +3,8 @@
 datadir=$HOME/.local/share/focalboard
 [[ -d ${datadir} ]] || mkdir -p ${datadir}
 cd ${datadir}
-cp -r /opt/focalboard/focalboard-app ${datadir}/
-cp -r /opt/focalboard/pack ${datadir}/
+cp -r /opt/focalboard/focalboard-app ${datadir}
+cp -r /opt/focalboard/pack ${datadir}
 [[ -d "files" ]] || mkdir -p files
 touch focalboard.db
 
